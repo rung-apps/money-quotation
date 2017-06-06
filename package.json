@@ -1,7 +1,7 @@
 {
   "name": "money-quotation",
-  "version": "1.0.0",
-  "description": "Conversão de moedas baseado no valor da cotação atual",
+  "version": "1.0.4",
+  "description": "Currency conversion based on current quote price",
   "main": "index.js",
   "repository": "https://github.com/rung-tools/rung-dollar-ext.git",
   "author": "Rung <suporte@rung.com.br>",
@@ -16,5 +16,8 @@
   "rung": {
     "title": "Cotação de moeda",
     "preview": "USD valendo BRL 3.13"
+  },
+  "devDependencies": {
+    "rung-cli": "^0.4.3"
   }
 }
