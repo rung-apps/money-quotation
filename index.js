@@ -161,6 +161,6 @@ export default create(main, {
     params,
     primaryKey: true,
     title: _('Currency quotation'),
-    description: _('Currency conversion based on current quote price'),
+    description: _('Identify the best exchange opportunities!'),
     preview: render('$', currencies.USD.name, 'R$', '3,29')
 });
