@@ -119,14 +119,18 @@ function renderAlert(base, target, result) {
 function main(context, done) {
     const { base, target, comparator, value } = context.params;
     const compare = comparator === 'maior' ? gt : lt;
+    const searchTerm = `${base}_${target}`;
 
     if (base === target) {
         return done({ alerts: {} });
     }
 
-    return request.get(`https://api.fixer.io/latest`)
-        .query({ base })
-        .then(path(['body', 'rates', target]))
+    return request.get('http://free.currencyconverterapi.com/api/v5/convert')
+        .query({
+            compact: 'y',
+            q: searchTerm
+        })
+        .then(path(['body', searchTerm, 'val']))
         .then(result => compare(result, value)
             ? { alerts: renderAlert(base, target, result.toFixed(2)) }
             : { alerts: {} })
@@ -153,7 +157,7 @@ const params = {
     value: {
         description: _('Comparison value'),
         type: Double,
-        default: 4.0
+        default: 6.0
     }
 };
 

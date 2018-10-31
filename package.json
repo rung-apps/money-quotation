@@ -1,16 +1,36 @@
 {
   "name": "money-quotation",
-  "version": "1.1.0",
+  "version": "1.1.3",
   "author": "Rung <suporte@rung.com.br>",
   "license": "MIT",
+  "categories": [
+    "personal",
+    "enterprises",
+    "investors",
+    "miscellaneous"
+  ],
+  "keywords": [
+    "cotação",
+    "quotation",
+    "moeda",
+    "dinheiro",
+    "money",
+    "dollar",
+    "dólar",
+    "euro",
+    "libra",
+    "pound"
+  ],
   "dependencies": {
     "bluebird": "^3.4.7",
+    "chai": "4.1.2",
+    "chai-json-schema": "1.5.0",
     "ramda": "^0.23.0",
     "rung-sdk": "^1.0.6",
     "superagent": "^3.5.0",
     "superagent-promise": "^1.1.0"
   },
   "devDependencies": {
-    "rung-cli": "^1.2.1"
+    "rung-cli": "latest"
   }
 }
